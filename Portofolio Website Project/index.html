@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <!-- script dari fontawesome -->
+    <script src="https://kit.fontawesome.com/e91dec686c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!--------- Section "Header" Start ---------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/LOGOO.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Interested</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- untuk icon silang -->
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <!-- tag i berfungsi untuk menambahkan icon menu yang sudah diambil dari website luar -->
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Tech Enthusiast</p>
+                <!-- diberikan tag span untuk pemisah styling pada css -->
+                <h1>Hi There<br>I'm <span>Gandhi</span> Suastika</h1>
+            </div>
+        </div>
+    </div>
+<!----x----- Section "Header" End -------x--->
+
+
+
+
+<!--------- Section "About" Start ---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/P1010645 - Edited.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>I introduce myself as <strong>Gandhi Suastika</strong>. I have a keen interest in the development of science and technology that is developing in this era of knowledge. This includes UI/UX design, web development, web-3, blockchain and machine learning. For my education, I am currently started my study at <strong>University of Surabaya</strong>. </p>
+
+                <div class="tab-titles">
+                    <!-- penambahan class kedua setelah tab-links berfungsi untuk membedakan elemen untuk di styling -->
+                    <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experiences')">Experiences</p>
+                    <p class="tab-links" onclick="opentab('educations')">Educations</p>
+                </div>
+                <!-- penambahan class berfungsi untuk menambahkan fungsi pada css untuk hide elemen nantinya -->
+                <div class="tab-contents tab-active" id="skills">
+                    <ul>
+                        <!-- untuk membuat list dengan isi penjelasan dibawahnya -->
+                        <!-- skill section -->
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Public Speaking</span><br>Presentation and Master of Ceremonies</li>
+                        <li><span>Writing</span><br>Creative and Academic Writing</li>
+                        <li><span>Photograph</span><br>DSLR Camera and Mirrorless Camera</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experiences">
+                    <ul>
+                        <!-- Experiences section -->
+                        <li><span>The Vice President of Student Council</span><br>I had the opportunity to be the Vice President of Bali Hati International Senior High school student council for 2 years. </li>
+                        <li><span>Master of Ceremonies</span><br>I had the opportunity to be the Master of Ceremony of the spectacular event namely Gathering Dinner 2021, and it held by Bali Hati School</li>
+                        <li><span>Chairman Committee</span><br>And last, the amazing experiences is to be the Chairman Committee of O'days Bali Hati International Senior High School</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="educations">
+                    <ul>
+                        <!-- Educations section -->
+                        <li><span>2017-2020</span><br>Public  Junior High School of 3 Gianyar</li>
+                        <li><span>2020-2023</span><br>Bali Hati International Senior High School</li>
+                        <li><span>2023-2027</span><br>Telkom University of Surabaya</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------x--- Section "About" End ---x------->
+
+
+
+
+<!--------- Section "Services" Start ---------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Interested</h1>
+        <div class="services-list">
+            <div>
+                <!-- untuk icon dari fontawesome -->
+                <i class="fa-solid fa-code"></i>
+                <h2>Machine Learning</h2>
+                <p>Machine Learning is a type of artificial intelligence that enables computers to learn from data and improve their performance on a specific task over time, without being explicitly programmed. It involves developing algorithms and models that allow machines to recognize patterns, make predictions, and make decisions based on examples and experiences.</p>
+                <a href="https://en.wikipedia.org/wiki/Machine_learning">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>UI (User Interface) Design refers to the visual layout and elements that users interact with when using a digital product or application. It focuses on creating a visually appealing and intuitive interface that users can easily navigate and interact with. UX (User Experience) Design, on the other hand, involves designing the overall experience and usability of a product to ensure users have a positive and meaningful interaction with it.</p>
+                <a href="https://en.wikipedia.org/wiki/User_experience_design">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>App Design encompasses the process of creating the visual and functional elements of a software application, typically for mobile devices or computers. It involves designing the user interface, user experience, and overall look and feel of the app. App design also includes planning how users will navigate through the app's features and ensuring a seamless and engaging experience.</p>
+                <a href="https://buildfire.com/tools-for-mobile-app-designers/#:~:text=App%20design%20is%20the%20look,the%20app's%20look%20and%20feel.">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!------x--- Section "Services" End ---x------->
+
+
+
+
+
+<!--------- Section "Portfolio" Start ---------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Works</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/Desktop - 8.png">
+                <div class="layer">
+                    <h3>The Perantenan</h3>
+                    <p>This application was created to solve the problem of ordering food in online application with dirrect methods to the owner of the resto.</p>
+                    <a href="https://www.figma.com/file/BdQd6M9Kl1uP3i5wzB68gY/Project-The-Perantenan?type=design&node-id=0%3A1&mode=design&t=I6Vbe67csdRPkOOo-1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/1.png">
+                <div class="layer">
+                    <h3>Menu Design</h3>
+                    <p>Design colorful and attractive food menus complete with mockups and life mockups.</p>
+                    <a href="https://www.canva.com/design/DAFnGTZZCJU/eQMGJMdpwJGtF_mmH3Jdhg/edit?utm_content=DAFnGTZZCJU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/2.png">
+                <div class="layer">
+                    <h3>Creative Video</h3>
+                    <p>A simple video with lot of random footages that gotton from Bali Hati Survival Camp 2022</p>
+                    <a href="https://youtu.be/1vRnJXGAFfA"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">Coming Soon</a>
+    </div>
+</div>
+<!-----x---- Section "Portfolio" End ----x------>
+
+
+
+
+<!--------- Section "Contact" Start ---------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> gandhisuastika@gmail.com</p>
+                <p> <i class="fa-solid fa-square-phone"></i> +62-819-995-250-56</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/gandi.wahyu.73/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/gandiwahyuu/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/gandhi-suastika-418218280"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/gandiwahyuuu"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <!-- menambahkan kelas ke-2 untuk menggunakan kelas 1 supaya bisa diedit -->
+                <!-- menambahkan tag download juga untuk menjalankan fungsi download -->
+                <a href="images/my-cv.pdf" download class="btn btn2">Download Attached File</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your E-Mail" required>
+                    <textarea name="Message" rows="6" placeholder="Input Your Text"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyritht © Gandhi Suastika</p>
+        </div>
+    </div>
+</div>
+<!-----x---- Section "Portfolio" End ----x------>
+
+
+
+
+<!------------Java Script "Nav-Menu" Start ---------------->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<!--------x---Java Script "Nav-Menu" End ---x------------->
+
+
+
+
+<!------------Java Script "About" Start ---------------->
+<script>
+    // script ini berfungsi untuk memberikan interaksi pada user dengan about section
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-links");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("tab-active");
+        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("tab-active");
+    }
+</script>
+<!--------x---Java Script "About" End ---x------------->
+
+
+
+<!-----------Java Script "CONTACT ACTIVE" start ---------------->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwJjYge8l6Gv14Xf5DxU-tyECP9pKCcuMU9ISYB5QegCqvShdsaXNk0NPdYjuZEiwYq/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Nah ul udah ke kirim"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+<!--------x---Java Script "CONTACT ACTIVE" End ---x------------->
+
+</body>
+</html>

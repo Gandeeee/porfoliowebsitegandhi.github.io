@@ -1,0 +1,462 @@
+
+/* General element styling */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* supaya scroling smooth pada website */
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* ----------- Body styling Start ---------- */
+body{
+    background: #080808;
+    color: #fff;
+}
+/* ----------- Body styling Stop ---------- */
+
+
+
+
+/* ---------Styling "Header" Start ---------- */
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/Untitled.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+/* tidak memakai titik karena tidak ada class jadi styling langsung ke tag html */
+nav{
+    /* untuk memisahkan logo dan navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    /* psudeo element untuk menambahkan garis pada text makanya menggunakan after */
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.7s;
+}
+nav ul li a:hover::after{
+    /* supaya ada animasi pada saat klik, animasi pada psudeo element after */
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+/* ------x---Styling "Header" Stop ---x------- */
+
+
+
+
+/* ---------Styling "About" Start ---------- */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    /* untuk memindahkan text about ke kanan dan menyisakan tempat di tengah' */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    /* supaya textnya mau di sebelah foto */
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    /* untuk menambahkan animasi highlight pada links */
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-links::after{
+    /* untuk membuat gambar di bawah tulisan supaya terlihat seperti half-underlined */
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    /* styling pada text di dalam kelas span */
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.tab-active{
+    /* jika menggunakan diplay block berarti akan menampilkan yang relative */
+    display: block;
+}
+/* ------x---Styling "About" End ---x------- */
+
+
+
+
+/* ---------Styling "Services" Start ---------- */
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    /* untuk memebuat suatu baris yang rapi seperti tabel */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    /* styling pada gridnya */
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    /* styling pada icon, dan menggunakan font size karena dibaca sebagai font */
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    /* animasi keatas bila diklik */
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+/* ------x---Styling "Services" End ---x------- */
+
+
+
+
+/* ---------Styling "Portfolio" Start ---------- */
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    /* untuk memebuat suatu baris yang rapi seperti tabel */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    /* supaya gambar terblok menyeluruh */
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    /* durasi transisi zoom in pada gambar */
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    /* dibuat 0 untuk dihide ketika normal screen dan bila dilewati kursor akan semula 100% */
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    /* supaya background gradient masuk ke gambar */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    /* suapaya text di tengah */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    /* durasi munculnya text layer bila dilewati cursor */
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    /* untuk memberikan animasi bila dilewati oleh cursor */
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    /* bila dilewati cursor akan memunculkan class layer */
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f
+}
+/* ------x---Styling "Portfolio" End ---x------- */
+
+
+
+
+/* ---------Styling "Contact" Start ---------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    /* styling untuk tombol submit */
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/* ------x---Styling "Contact" End ---x------- */
+
+
+
+
+/* ---------Styling Small Screen Start ---------- */
+nav .fas{
+    /* berfungsi untuk hide icon menu pada screen besar */
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/Group\ 3.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        /* supaya kelihatan di small screen */
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background:#ff004f;
+        position: fixed;
+        top: 0;
+        /* untuk hide menu supaya javascript jalan */
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        /* transisi untuk menu navbar */
+        transition: right 0.5s;
+    }
+    nav ul li{
+        /* supaya list menu menjadi vertikal */
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 25px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        /* supaya kolom input menyesuaikan ke ukuran layar */
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+/* Project is done */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
